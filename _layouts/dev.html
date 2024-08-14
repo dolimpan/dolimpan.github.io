@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'ChangwonDangamAsac', sans-serif;
+            height: 100;
+            overflow-x: hidden;
+        }
+
+        /* 네비게이션 바 스타일 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background-color: #0069F4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        /* 왼쪽 숫자 9 스타일 */
+        .navbar-left a {
+            font-size: 5em;
+            color: #FFA700;
+            text-decoration: none; /* 링크의 밑줄 제거 */
+        }
+
+        /* 오른쪽 네비게이션 항목 스타일 */
+        .navbar-right {
+            display: flex;
+            gap: 50px;
+        }
+
+        .navbar-right a {
+            text-decoration: none;
+            font-size: 4rem;
+        }
+
+        .navbar-right a:nth-child(1) {
+            color: #ffffff;
+        }
+
+        .navbar-right a:nth-child(2),
+        .navbar-right a:nth-child(3) {
+            color: #BFDBFF;
+        }
+
+        /* 컨텐츠 영역 스타일 */
+        .content {
+            margin-top: 140px; /* 네비게이션 바 아래에 여백 추가 */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* 제목 스타일 */
+        .content-title {
+            font-size: 8rem;
+            margin-bottom: 20px;
+            padding-left: 40px; /* 제목에 padding-left 추가 */
+        }
+
+        /* 폴더와 설명을 담을 그리드 컨테이너 */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); /* 6열 그리드 */
+            grid-template-rows: repeat(2, auto); /* 2행 그리드 */
+            gap: 50px; /* 그리드 아이템 간의 간격 */
+        }
+
+        /* 개별 그리드 아이템 스타일 */
+        .grid-item {
+            text-align: center;
+            padding: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* hover 효과를 부드럽게 전환 */
+        }
+
+        .grid-item:hover {
+            background-color: #cccccc; /* hover 시 회색 배경색 추가 */
+            transform: scale(1.05); /* 전체를 살짝 확대 */
+            border-radius: 5px; /* 네모 모서리를 둥글게 처리 */
+        }
+
+        .grid-item img {
+            max-width: 60%; /* 폴더 이미지 크기를 더 작게 조정 */
+            height: auto;
+        }
+
+        .grid-item p {
+            margin-top: 10px;
+            font-size: 2rem;			
+            font-weight: bold;
+            font-family: 'Pretendard', sans-serif; /* 설명 부분을 Pretendard 폰트로 설정 */
+        }
+
+        .grid-item a {
+            text-decoration: none;
+            color: inherit; /* 링크의 색상을 부모 요소에서 상속 */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 네비게이션 바 -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="localhost:4000/">9</a> <!-- 숫자 9에 링크 추가 -->
+        </div>
+        <div class="navbar-right">
+            <a href="#">개발</a>
+            <a href="#">목표</a>
+            <a href="#">일상</a>
+        </div>
+    </div>
+
+    <!-- 페이지 내용 -->
+    <div class="content">
+        <div class="content-title">{{ page.title }}</div> <!-- 페이지의 제목을 표시 -->
+        <div class="grid-container">
+            {% for item in page.items %}
+            <div class="grid-item">
+                <a href="#">
+                    <img src="/assets/folder.png" alt="Folder {{ item }}">
+                    <p>{{ item }}</p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>
