@@ -9,7 +9,6 @@
             margin: 0;
             padding: 0;
             font-family: 'ChangwonDangamAsac', sans-serif;
-            height: 100;
             overflow-x: hidden;
         }
 
@@ -70,42 +69,34 @@
             padding-left: 40px; /* 제목에 padding-left 추가 */
         }
 
-        /* 폴더와 설명을 담을 그리드 컨테이너 */
+        /* 그리드 컨테이너 스타일 */
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(6, 1fr); /* 6열 그리드 */
-            grid-template-rows: repeat(2, auto); /* 2행 그리드 */
-            gap: 50px; /* 그리드 아이템 간의 간격 */
+            grid-template-columns: repeat(5, 1fr); /* 5열 그리드 */
+            gap: 20px; /* 그리드 아이템 간의 간격 */
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         /* 개별 그리드 아이템 스타일 */
         .grid-item {
             text-align: center;
-            padding: 5px;
+            padding: 10px;
+            border: 1px solid #ddd;
             transition: background-color 0.3s ease, transform 0.3s ease; /* hover 효과를 부드럽게 전환 */
         }
 
         .grid-item:hover {
-            background-color: #cccccc; /* hover 시 회색 배경색 추가 */
+            background-color: #f0f0f0; /* hover 시 배경색 추가 */
             transform: scale(1.05); /* 전체를 살짝 확대 */
             border-radius: 5px; /* 네모 모서리를 둥글게 처리 */
-        }
-
-        .grid-item img {
-            max-width: 60%; /* 폴더 이미지 크기를 더 작게 조정 */
-            height: auto;
-        }
-
-        .grid-item p {
-            margin-top: 10px;
-            font-size: 2rem;			
-            font-weight: bold;
-            font-family: 'Pretendard', sans-serif; /* 설명 부분을 Pretendard 폰트로 설정 */
         }
 
         .grid-item a {
             text-decoration: none;
             color: inherit; /* 링크의 색상을 부모 요소에서 상속 */
+            font-size: 1.5rem;
+            font-family: 'Pretendard', sans-serif;
         }
     </style>
 </head>
@@ -127,16 +118,13 @@
     <div class="content">
         <div class="content-title">{{ page.title }}</div> <!-- 페이지의 제목을 표시 -->
         <div class="grid-container">
-            {% for item in page.items %}
+            {% for post in site.posts limit:5 %}
             <div class="grid-item">
-                <a href="{{ site.baseurl }}/{{ page.links[forloop.index0] }}">
- <!-- 각 item마다 다른 href 설정 -->
-                    <img src="/assets/folder.png" alt="Folder {{ item }}">
-                    <p>{{ item }}</p>
-                </a>
+                <a href="{{ post.url }}">{{ post.title }}</a>
             </div>
             {% endfor %}
         </div>
     </div>
+
 </body>
 </html>
