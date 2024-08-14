@@ -69,34 +69,32 @@
             padding-left: 40px; /* 제목에 padding-left 추가 */
         }
 
-        /* 그리드 컨테이너 스타일 */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr); /* 5열 그리드 */
-            gap: 20px; /* 그리드 아이템 간의 간격 */
+        /* 리스트 아이템 스타일 */
+        .list-item {
+            background-color: #dddddd; /* 리스트 배경색 */
             padding: 20px;
-            box-sizing: border-box;
-        }
-
-        /* 개별 그리드 아이템 스타일 */
-        .grid-item {
-            text-align: center;
-            padding: 10px;
-            border: 1px solid #ddd;
-            transition: background-color 0.3s ease, transform 0.3s ease; /* hover 효과를 부드럽게 전환 */
-        }
-
-        .grid-item:hover {
-            background-color: #f0f0f0; /* hover 시 배경색 추가 */
-            transform: scale(1.05); /* 전체를 살짝 확대 */
-            border-radius: 5px; /* 네모 모서리를 둥글게 처리 */
-        }
-
-        .grid-item a {
-            text-decoration: none;
-            color: inherit; /* 링크의 색상을 부모 요소에서 상속 */
-            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-size: 2rem;
             font-family: 'Pretendard', sans-serif;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.15s ease;
+        }
+
+        .list-item:hover {
+            background-color: #cccccc; /* hover 시 배경색 변경 */
+        }
+
+        /* 링크의 기본, 방문 후 상태에서도 동일한 색상 유지 */
+        .list-item a {
+            color: inherit; /* 부모의 색상을 상속받음 */
+            text-decoration: none; /* 링크 밑줄 제거 */
+        }
+
+        .list-item a:visited {
+            color: black; /* 방문 후에도 부모의 색상을 상속받음 */
         }
     </style>
 </head>
@@ -119,7 +117,7 @@
         <div class="content-title">{{ page.title }}</div> <!-- 페이지의 제목을 표시 -->
         <div class="grid-container">
             {% for post in site.posts limit:5 %}
-            <div class="grid-item">
+            <div class="list-item">
                 <a href="{{ post.url }}">{{ post.title }}</a>
             </div>
             {% endfor %}
