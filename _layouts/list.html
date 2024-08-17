@@ -77,7 +77,7 @@
             font-size: 2rem;
             font-family: 'Pretendard', sans-serif;
             font-weight: bold;
-            color: #333;
+            color: #000000;
             text-decoration: none;
             display: block;
             transition: background-color 0.15s ease;
@@ -96,6 +96,34 @@
         .list-item a:visited {
             color: black; /* 방문 후에도 부모의 색상을 상속받음 */
         }
+
+        /* 페이지네이션 스타일 */
+        .pagination {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .pagination a {
+            text-decoration: none;
+            font-family: 'Pretendard';
+            font-weight: bold;
+            padding: 10px 15px;
+            color: #0069F4;
+            border: 1px solid #0069F4;
+            margin: 0 5px;
+            font-size: 1.5rem;
+        }
+
+        .pagination a:hover {
+            background-color: #0069F4;
+            color: white;
+        }
+
+        .pagination a.active {
+            background-color: #0069F4;
+            color: white;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
@@ -106,7 +134,7 @@
             <a href="{{ site.baseurl }}/">9</a> <!-- baseurl로 돌아가도록 설정 -->
         </div>
         <div class="navbar-right">
-            <a href="#">개발</a>
+            <a href="{{ site.baseurl }}/dev">개발</a>
             <a href="#">목표</a>
             <a href="#">일상</a>
         </div>
@@ -116,11 +144,24 @@
     <div class="content">
         <div class="content-title">{{ page.title }}</div> <!-- 페이지의 제목을 표시 -->
         <div class="grid-container">
-            {% for post in site.posts limit:5 %}
+            {% for post in paginator.posts %}
             <div class="list-item">
                 <a href="{{ post.url }}">{{ post.title }}</a>
             </div>
             {% endfor %}
+        </div>
+
+        <!-- 페이지네이션 -->
+        <div class="pagination">
+            {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path | relative_url }}">Previous</a>
+            {% endif %}
+            {% for page in (1..paginator.total_pages) %}
+                <a href="{{ paginator.page_path | relative_url }}" class="{% if paginator.page == page %}active{% endif %}">{{ page }}</a>
+            {% endfor %}
+            {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path | relative_url }}">Next</a>
+            {% endif %}
         </div>
     </div>
 

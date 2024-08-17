@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Pretendard', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* 네비게이션 바 스타일 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background-color: #0069F4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        /* 왼쪽 숫자 9 스타일 */
+        .navbar-left a {
+            font-family: 'ChangwonDangamAsac', sans-serif;
+            font-size: 5em;
+            color: #FFA700;
+            text-decoration: none; /* 링크의 밑줄 제거 */
+        }
+
+        /* 오른쪽 네비게이션 항목 스타일 */
+        .navbar-right {
+            font-family: 'ChangwonDangamAsac', sans-serif;
+            display: flex;
+            gap: 50px;
+        }
+
+        .navbar-right a {
+            font-family: 'ChangwonDangamAsac', sans-serif;
+            text-decoration: none;
+            font-size: 4rem;
+        }
+
+        .navbar-right a:nth-child(1) {
+            color: #ffffff;
+        }
+
+        .navbar-right a:nth-child(2),
+        .navbar-right a:nth-child(3) {
+            color: #BFDBFF;
+        }
+
+        /* 페이지 내용 */
+        .content {
+            margin-top: 180px; /* 네비게이션 바 아래에 여백 추가 */
+            padding: 20px;
+            padding-left: 280px;
+            padding-right: 280px;
+            box-sizing: border-box;
+            text-align: left; /* 내용 왼쪽 정렬 */
+        }
+
+        /* 제목 스타일 */
+        .content-title {
+            font-size: 4rem;
+            font-weight: 850;
+            font-family: 'Pretendard', sans-serif;
+            margin: 0 auto 10px auto;
+            text-align: center; /* 제목 중앙 정렬 */
+            max-width: 1200px;
+        }
+
+        /* 작성일 스타일 */
+        .content-date {
+            font-size: 1.25rem;
+            color: #686868;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* 본문 내용 스타일 */
+        .content-body {
+            font-size: 1.5rem;
+            line-height: 1.5;
+            margin-bottom: 60px;
+        }
+
+        /* 다음글/이전글 스타일 */
+        .navigation-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            font-size: 1.5rem;
+        }
+
+        .navigation-links a {
+            color: #000000;
+            text-decoration: none;
+            background-color: #dddddd;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .navigation-links a:hover {
+            background-color: #cccccc;
+        }
+
+        /* 댓글 섹션 스타일 */
+        .comments-section {
+            margin-top: 60px;
+            text-align: left;
+        }
+
+        .comments-section h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .comment-form textarea {
+            font-family: 'Pretendard', sans-serif;
+            width: 100%;
+            height: 100px;
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+        }
+
+        .comment-form button {
+            font-family: 'Pretendard', sans-serif;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #0069F4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .comment-form button:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 네비게이션 바 -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="{{ site.baseurl }}/">9</a> <!-- baseurl로 돌아가도록 설정 -->
+        </div>
+        <div class="navbar-right">
+            <a href="{{ site.baseurl }}/dev">개발</a>
+            <a href="#">목표</a>
+            <a href="#">일상</a>
+        </div>
+    </div>
+
+    <!-- 페이지 내용 -->
+    <div class="content">
+        <div class="content-title">{{ page.title }}</div> <!-- 페이지의 제목을 표시 -->
+
+        <div class="content-date">{{ page.date | date: "%Y년 %m월 %d일" }}</div> <!-- 작성일 표시 -->
+        <br><br>
+        <div class="content-body">
+            {{ content }}
+        </div>
+
+        <!-- 이전글/다음글 링크 -->
+        <div class="navigation-links">
+            {% if page.previous %}
+            <a href="{{ page.previous.url }}">◀ 이전글</a>
+            {% endif %}
+            {% if page.next %}
+            <a href="{{ page.next.url }}">다음글 ▶</a>
+            {% endif %}
+        </div>
+
+        <!-- 댓글 섹션 -->
+        <div class="comments-section">
+            <h2>댓글</h2>
+            <form class="comment-form">
+                <textarea name="comment" placeholder="댓글을 입력하세요..."></textarea>
+                <button type="submit">댓글 달기</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

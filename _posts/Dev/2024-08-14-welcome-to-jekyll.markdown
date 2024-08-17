@@ -1,6 +1,6 @@
 ---
-layout: post
-title:  "Good afternoon!"
+layout: view
+title:  "Good afternoon! Everyone i am jaeminku and this is my first self-made website"
 date:   2024-08-14 18:32:22 +0900
 categories: jekyll update
 ---

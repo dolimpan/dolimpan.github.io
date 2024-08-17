@@ -8,10 +8,17 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
-paginate: 7 # 한 페이지에 표시할 포스트 수
-paginate_path: "/page:num" # 현재 경로를 고려한 페이지네이션 경로
+
+pagination:
+  enabled: true
+  per_page: 7
+  permalink: "/dev/prev/web/page/:num/" # 페이지네이션 경로 설정
+  title: ":title - page :num"
+  sort_field: "date"
+  sort_reverse: true
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate-v2
