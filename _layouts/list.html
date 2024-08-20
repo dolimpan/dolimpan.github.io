@@ -149,26 +149,35 @@
     </div>
 
     <!-- 페이지 내용 -->
-    <div class="content">
-        <div class="content-title">{{ page.title }}</div> <!-- 페이지의 제목을 표시 -->
-        <div class="grid-container">
-            {% for post in paginator.posts %}
-            <div class="list-item">
-                <a href="{{ post.url }}">{{ post.title }}</a>
-            </div>
-            {% endfor %}
+     <div class="content">
+        <div class="content-title">{{ page.title }}</div>
+
+        <!-- 포스트 출력 -->
+        {% assign posts_per_page = 5 %}
+        {% assign current_page = page.url | split: '/' | last | plus: 0 %}
+        {% assign total_posts = site.posts | size %}
+        {% assign total_pages = total_posts | divided_by: posts_per_page | ceil %}
+        {% assign start_index = posts_per_page | times: current_page | minus: posts_per_page %}
+        {% assign end_index = start_index | plus: posts_per_page %}
+
+        {% for post in site.posts offset:start_index limit:posts_per_page %}
+        <div class="list-item">
+            <a href="{{ post.url }}">{{ post.title }}</a>
         </div>
+        {% endfor %}
 
         <!-- 페이지네이션 -->
         <div class="pagination">
-            {% if paginator.previous_page %}
-                <a href="{{ paginator.previous_page_path | relative_url }}">Previous</a>
+            {% if current_page > 1 %}
+            <a href="{{ site.baseurl }}/page{{ current_page | minus: 1 }}">Previous</a>
             {% endif %}
-            {% for page in (1..paginator.total_pages) %}
-                <a href="{{ paginator.page_path | relative_url }}" class="{% if paginator.page == page %}active{% endif %}">{{ page }}</a>
+
+            {% for page in (1..total_pages) %}
+            <a href="{{ site.baseurl }}/page{{ page }}" class="{% if page == current_page %}active{% endif %}">{{ page }}</a>
             {% endfor %}
-            {% if paginator.next_page %}
-                <a href="{{ paginator.next_page_path | relative_url }}">Next</a>
+
+            {% if current_page < total_pages %}
+            <a href="{{ site.baseurl }}/page{{ current_page | plus: 1 }}">Next</a>
             {% endif %}
         </div>
     </div>
