@@ -8,11 +8,11 @@
     <title>{{ page.title }}</title>
     <style>
         @font-face {
-    font-family: 'ChangwonDangamAsac';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+            font-family: 'ChangwonDangamAsac';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
             margin: 0;
             padding: 0;
@@ -20,7 +20,6 @@
             overflow-x: hidden;
         }
 
-        /* 네비게이션 바 스타일 */
         .navbar {
             position: fixed;
             top: 0;
@@ -36,14 +35,12 @@
             z-index: 1000;
         }
 
-        /* 왼쪽 숫자 9 스타일 */
         .navbar-left a {
             font-size: 5em;
             color: #FFA700;
-            text-decoration: none; /* 링크의 밑줄 제거 */
+            text-decoration: none;
         }
 
-        /* 오른쪽 네비게이션 항목 스타일 */
         .navbar-right {
             display: flex;
             gap: 50px;
@@ -63,23 +60,20 @@
             color: #BFDBFF;
         }
 
-        /* 컨텐츠 영역 스타일 */
         .content {
-            margin-top: 140px; /* 네비게이션 바 아래에 여백 추가 */
+            margin-top: 140px;
             padding: 20px;
             box-sizing: border-box;
         }
 
-        /* 제목 스타일 */
         .content-title {
             font-size: 8rem;
             margin-bottom: 20px;
-            padding-left: 40px; /* 제목에 padding-left 추가 */
+            padding-left: 40px;
         }
 
-        /* 리스트 아이템 스타일 */
         .list-item {
-            background-color: #dddddd; /* 리스트 배경색 */
+            background-color: #dddddd;
             padding: 20px;
             margin-bottom: 10px;
             font-size: 2rem;
@@ -92,54 +86,38 @@
         }
 
         .list-item:hover {
-            background-color: #cccccc; /* hover 시 배경색 변경 */
+            background-color: #cccccc;
         }
 
-        /* 링크의 기본, 방문 후 상태에서도 동일한 색상 유지 */
         .list-item a {
-            color: inherit; /* 부모의 색상을 상속받음 */
-            text-decoration: none; /* 링크 밑줄 제거 */
+            color: inherit;
+            text-decoration: none;
         }
 
         .list-item a:visited {
-            color: black; /* 방문 후에도 부모의 색상을 상속받음 */
+            color: black;
         }
 
-        /* 페이지네이션 스타일 */
-        .pagination {
+        .load-more {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #0069F4;
+            color: white;
             text-align: center;
-            margin-top: 40px;
-        }
-
-        .pagination a {
+            cursor: pointer;
+            border-radius: 5px;
             text-decoration: none;
-            font-family: 'Pretendard';
-            font-weight: bold;
-            padding: 10px 15px;
-            color: #0069F4;
-            border: 1px solid #0069F4;
-            margin: 0 5px;
+            font-family: 'ChangwonDangamAsac', sans-serif;
             font-size: 1.5rem;
-        }
-
-        .pagination a:hover {
-            background-color: #0069F4;
-            color: white;
-        }
-
-        .pagination a.active {
-            background-color: #0069F4;
-            color: white;
-            pointer-events: none;
         }
     </style>
 </head>
 <body>
 
-    <!-- 네비게이션 바 -->
     <div class="navbar">
         <div class="navbar-left">
-            <a href="{{ site.baseurl }}/">9</a> <!-- baseurl로 돌아가도록 설정 -->
+            <a href="{{ site.baseurl }}/">9</a>
         </div>
         <div class="navbar-right">
             <a href="{{ site.baseurl }}/dev">개발</a>
@@ -148,39 +126,54 @@
         </div>
     </div>
 
-    <!-- 페이지 내용 -->
-     <div class="content">
+    <div class="content">
         <div class="content-title">{{ page.title }}</div>
 
-        <!-- 포스트 출력 -->
-        {% assign posts_per_page = 5 %}
-        {% assign current_page = page.url | split: '/' | last | plus: 0 %}
-        {% assign total_posts = site.posts | size %}
-        {% assign total_pages = total_posts | divided_by: posts_per_page | ceil %}
-        {% assign start_index = posts_per_page | times: current_page | minus: posts_per_page %}
-        {% assign end_index = start_index | plus: posts_per_page %}
-
-        {% for post in site.posts offset:start_index limit:posts_per_page %}
-        <div class="list-item">
-            <a href="{{ post.url }}">{{ post.title }}</a>
-        </div>
-        {% endfor %}
-
-        <!-- 페이지네이션 -->
-        <div class="pagination">
-            {% if current_page > 1 %}
-            <a href="{{ site.baseurl }}/page{{ current_page | minus: 1 }}">Previous</a>
+        <div class="post-list">
+            {% assign post_count = site.posts | size %}
+            {% assign display_count = post_count %}
+            {% if post_count > 7 %}
+                {% assign display_count = 7 %}
             {% endif %}
-
-            {% for page in (1..total_pages) %}
-            <a href="{{ site.baseurl }}/page{{ page }}" class="{% if page == current_page %}active{% endif %}">{{ page }}</a>
+            {% for post in site.posts limit:display_count %}
+            <div class="list-item">
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </div>
             {% endfor %}
-
-            {% if current_page < total_pages %}
-            <a href="{{ site.baseurl }}/page{{ current_page | plus: 1 }}">Next</a>
-            {% endif %}
         </div>
+
+        {% if post_count > 7 %}
+        <a class="load-more">더보기</a>
+        {% endif %}
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const loadMoreBtn = document.querySelector('.load-more');
+            const posts = document.querySelectorAll('.list-item');
+            let visiblePosts = posts.length;
+
+            loadMoreBtn.addEventListener('click', function () {
+                {% assign remaining_posts = site.posts | size | minus: 7 %}
+                {% if remaining_posts > 7 %}
+                    {% assign load_count = 7 %}
+                {% else %}
+                    {% assign load_count = remaining_posts %}
+                {% endif %}
+
+                {% for post in site.posts offset:visiblePosts limit:load_count %}
+                const newPost = document.createElement('div');
+                newPost.classList.add('list-item');
+                newPost.innerHTML = '<a href="{{ post.url }}">{{ post.title }}</a>';
+                document.querySelector('.post-list').appendChild(newPost);
+                {% endfor %}
+                
+                visiblePosts += {{ load_count }};
+                if (visiblePosts >= {{ site.posts | size }}) {
+                    loadMoreBtn.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
 </body>
-</html>

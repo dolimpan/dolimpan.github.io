@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소개</title>
+    <style>
+        @font-face {
+            font-family: 'ChangwonDangamAsac';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            margin: 0;
+            padding: 0;font-weight: 900;
+
+            font-family: 'Pretendard', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background-color: #0069F4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        .navbar-left a {
+            font-family: 'ChangwonDangamAsac', sans-serif;
+            font-size: 5em;
+            color: #FFA700;
+            text-decoration: none;
+        }
+
+        .navbar-right {
+            font-family: 'ChangwonDangamAsac', sans-serif;
+            display: flex;
+            gap: 50px;
+        }
+
+        .navbar-right a {
+            font-family: 'ChangwonDangamAsac', sans-serif;
+            text-decoration: none;
+            font-size: 4rem;
+        }
+
+        .navbar-right a:nth-child(1) {
+            color: #ffffff;
+        }
+
+        .navbar-right a:nth-child(2),
+        .navbar-right a:nth-child(3) {
+            color: #BFDBFF;
+        }
+
+        .content {
+            margin-top: 350px;
+            padding: 20px 280px; /* 양옆 패딩 */
+            box-sizing: border-box;
+        }
+
+        .content-title {
+            font-size: 5rem;font-weight: 900;
+
+            font-family: 'Pretendard', sans-serif;
+            margin-bottom: 40px;
+            text-align: left; /* 왼쪽 정렬 */
+            line-height: 1.2;
+        }
+
+        .highlight {
+            background: linear-gradient(to right, #0069F4, #00D4FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 네비게이션 바 -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="{{ site.baseurl }}/">9</a> <!-- baseurl로 돌아가도록 설정 -->
+        </div>
+        <div class="navbar-right">
+            <a href="{{ site.baseurl }}/dev">개발</a>
+            <a href="#">목표</a>
+            <a href="#">일상</a>
+        </div>
+    </div>
+
+    <!-- 페이지 내용 -->
+    <div class="content">
+        <div class="content-title">
+            안녕하세요!<br> 개발자 <span class="highlight">구재민</span>입니다
+        </div>
+    </div>
+
+</body>
+</html>
