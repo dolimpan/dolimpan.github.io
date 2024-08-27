@@ -4,23 +4,33 @@ title:  "경남 마이미 게임잼 후기"
 date:   2024-07-12 12:00:00 +0900
 categories: unity
 ---
+#UNITY #C# #기획 #2024
 
-이번 방학은 알차게 보내보고자 공모전에 참여해보기로 마음먹었다.<br>
-갓 1학년을 졸업한 내 스펙선에서는 지원할 수 있는 공모전 수가 많이 없었는데, <br>
-그러던 중 <경남 마이미> 참가자 모집 공고를 보게됐다.
+[TOC]
+
+#### 0. 배경
+
+이번 여름방학은 알차게 보내보고자 공모전이나 대회에 참여해보기로 마음먹었다. 아무래도 공모전과 대회는 이미 배운 지식을 가지고 뽐내는 자리에 가까운 만큼, 경쟁자 수준이 많이 높지않고, 내가 가진 지식선에서 참여할 수 있는 공모전을 찾아봤다. 갓 1학년을 졸업한 내 스펙선에서는 지원할 수 있는 공모전 수가 많이 없었는데, 그러던 중 <경남 마이미 게임잼> 참가자 모집 공고를 보게됐다.
 
 
-게임잼은 24~72시간 이내에 온전한 게임 한 작품을 완성해야하는 형식의 대회이다. <br>
-일반인도 참여가능한 수준의 참가 자격도 마음에 들었고, 무엇보다 고등학교 시절 게임 개발 동아리의 기장을 맡을만큼 관심있는 분야였기에 대회신청을 하게됐다.
 
-직군은 3종류로 나뉘었는데,
-게임개발을 총괄하는 기획, 코드를 짜는 개발, 어셋을 담당하는 아트 직군으로, 4명이 역할 분담을 해 팀을 이루는 식이였다.
+#### 1. 개요
+
+![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdxEMa1S7lQVG38Q6-BBAPqg-QzqVDymR7Fkz05dIgtBtYIppfDFCpZufiTCRb0bLDgi3Phdsfb9igDGxBmMVPUrTfzYG4Xy_2uEQZ_ZhwsF-Lz3eSkegTWzvKVq0EB7zRqYZQTizKBHz88kqB9jgFNcqrd?key=auuBQwKamwgprpUM0X5qvw)
+
+게임잼은 24~72시간 이내에 온전한 게임 한 작품을 완성해야하는 형식의 대회이다.
+
+일반인도 참여가능한 수준의 참가 자격도 마음에 들었고, 무엇보다 고등학교 시절 게임 개발 동아리의 기장을 맡을만큼 관심있는 분야였기에 관심이 생겨 대회신청을 했다.
+
+직군은 3종류로 나뉘었는데 게임개발을 총괄하는 기획, 코드를 짜는 개발, 어셋을 담당하는 아트 직군으로, 4명이 역할 분담을 해 팀을 이루는 식이였다.
 
 참가는 개인으로 신청하면 직군에 맞추어 자체적으로 랜덤 팀을 구성해주고, 사전에 구성한 팀으로 신청도 가능했다.
-나는 사전 구성팀으로 참가했는데, 모집한 참가자 넷 중, 나만 게임개발 경력이 있었다는점과 나는 기획, 개발, 아트 모두 참여가능하다는점에서 기획직군을 맡게됐다.
+
+나는 사전 구성팀으로 참가했는데, 넷 중 나만 게임개발 경력이 있었다는점과 나는 기획, 개발, 아트 모두 참여가능하다는점에서 기획직군을 맡게됐다.
 
 내 경력과 과거 프로젝트 경험, 게임 엔진에 대한 이해도 등을 적어 제출하며 대회 신청을 마무리했고 몇주 후 약 3대1 경쟁률을 뚫고 경남 마이미 게임잼(이하 게임잼) 참가자에 선정되었다는 메일을 받게되었다.
 
+**![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdpF6xUkvS3Z_-IPQvJoY63-7cLyPfCcagPJMDuAnf5MJQSXl8laGOAp_cMHxgYVVhov-Lz8cSvunjeIoMvGstqbEtMtTo6UvU-n5Diu9lzeyVkGd1MznomslV0cKqOl4FVd6Q9uJ6asnI7j-BMZ3zsJDA?key=auuBQwKamwgprpUM0X5qvw)**
 
 오리엔테이션 내용을 요약하면 다음과 같았다.
 
@@ -29,21 +39,68 @@ categories: unity
 3. 게임 개발은 48시간 동안만 진행
 4. 아트 어셋은 사전에 그려올수 없음
 
+![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXf8Mc8UcN7zGe-h75-xVU-d6fwnZBdXfWQtJ5ySyyEwnUWTUCBPRHdf0q-GqJ976t5ZEfkrU6gg3UkJGcmObF_3BpXaizbM3ijHy0PjHW7TbkDXx3DNDPsUt3QHRehecklxuokuINyM6ZMYFQyggSSLjpRd?key=auuBQwKamwgprpUM0X5qvw) 
 
-심사기준은 다음과 같았다. 나는 보통 게임 개발하면 완성도와 구현정도를 중점적으로 볼 것이라 예상했으나, 기획, 개발, 아트부분 점수가 균일하게 분배되어있는것은 물론, 아이디어 구현, 재미요소등 예상치 못한 부분이 평가대상이였는데, 게임개발이라는 분야 안에는 오직 ‘개발’ 만 있을거라 생각했던 내 자신을 반성하는 계기가 됐다.
+심사기준은 다음과 같았다. 나는 보통 게임 개발하면 완성도와 구현정도를 중점적으로 볼 것이라 예상했으나, 기획, 개발, 아트부분 점수가 균일하게 분배되어있는것은 물론, 아이디어 구현, 재미요소등 예상치 못한 부분이 평가대상이였는데, 게임개발이라는 분야 안에는 오직 ‘개발’ 만 있을거라 생각했던 내 자신을 반성했다.
 
 그렇게 시간이 지나고, 대회 일주일 전 드디어 주제가 발표됐다.
 
+![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeSXu8PQeTBFkjSOisQYkG-6Cbk-QqLASxZvvEbeuHeBPfDtslJWC2L1DVUpu_1abamsJR6vm6t9AL32i07e7QUW769tNjn0UlpTqmBv7l4GwB1iJRH4gYHsplGz094HOFhruOwqvMFKt3ONZr7-Bi_Aokf?key=auuBQwKamwgprpUM0X5qvw)
 
 주제는 “MOVE”. 작년 2023 경남 게임잼 주제가 ‘가야 유물’ 이였던것에 비해 주제가 많이 자유로워졌다.
 
-주제가 공개되자마자 우리팀은 모여서 기획회의를 시작했다. Move? 움직이다? 감동시키다? 부터 진화, 미분방정식, 인문학으로까지 가지뻗기를 시작했다.
 
-![image.png](image.png)
 
-> <브레인스토밍 문서>
-> 
+#### 2. 대회 전
 
-처음에는 주먹 구구식으로 구글 공유문서에 브레인스토밍을 하면서 시작했는데, 게임의 외곽이 잡혀가면 갈수록 신경써야하는 내용이 점점 더 많아졌고, 자료 관리를 용이하게 하기위해 노션 플랫폼을 사용하기로 했다.
+주제가 공개되자마자 우리팀은 모여서 기획회의를 시작했다.
 
-[경남 게임잼 2024🕹️ ](https://www.notion.so/2024-57bdce0b563c481885fb344883501f58?pvs=21)
+![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXfm7uOieGm7gdSddpaNmbByePLY3o-Q4rIdnbSHY65mlkehGCrMwUD8RpLOkmhOKIIdnGLktv7xjxWgbb5kjfTvQFQFRMIyb3i7Mjl-xMFfxgwRYhWrIZLhujIklcyUf97sEF6e7pYLMXplTxR6LXfo2q4A?key=auuBQwKamwgprpUM0X5qvw)
+
+처음에는 주먹구구식으로 구글 공유문서에 브레인스토밍을 하면서 시작했는데, 게임의 외곽이 잡혀가면 갈수록 신경써야하는 내용이 점점 더 많아졌고, Notion플랫폼을 활용해 필요한 정보를 모으기 시작했다.
+
+![스크린샷 2024-08-28 오전 5.07.02](/Users/ku/Library/Application Support/typora-user-images/스크린샷 2024-08-28 오전 5.07.02.png)
+
+우리팀은 MOVE의 이동 성질 -> 동력 -> 무한동력으로 의미를 확장시켰고, 무한동력 이외에도 MOVE의 사전적 의미인 "이주하다", "감동을 주다"등의 요소를 넣었다.
+
+> *move, 움직일 동. 주인공은 최종목표인 무한동력을 향해 움직입니다*
+>
+> *또, 추위를 피하고 주변 위험 요소에서 벗어나기 위해 끊임없이 몸을 움직여야 한다는 점 또한 확인할 수 있습니다.*
+>
+> *'이주하다'라는 뜻의 move도 게임에 담았는데요, 경남이는 새로운 행성으로 이주를 가능케 하기위해 무한동력을 꿈꿉니다.*
+>
+> *move에는 '행동하다, 판단하다'라는 뜻 도 존재합니다. 극한의 상황속 플레이어는 수많은 판단을 내려야합니다. 또, 암울한 현실속 결국 목표를 이뤄내는 스토리구조를 통해 "절망적인 상황에서 포기하지 않고 움직여라" 라는 메세지를 전달하고자 했습니다.*
+>
+> *마지막으로 move는 '감동을 일으키다'라는 뜻도 가지고있는데요, 신물질 GN의 발견과 최종 결말까지의 과정이 일련의 스토리로 구성되어 있어 게임을 통해 감동을 선사하고자 했습니다.*
+
+<실제 대본 내용>
+
+이후로 계속된 비대면 회의를 통해 게임 요소, 캐릭터 설정, 그래픽 컨셉, 게임 특징등을 마저 구상했고, 자세한 내용은
+
+- [게임 세부 기획](https://docs.google.com/document/d/1eX8npd2ohdhRn7GtCmHqk86F9yTWo55h7Q8OWi-bLLE/edit)
+
+- [게임잼 잼보드](https://docs.google.com/document/d/1u1R-FwE4aGDh1XEYca6M1CJLcCoeNp_xwpMGVVJf3IA/edit) 
+
+에서 확인할 수 있다.
+
+
+
+#### 3. 대회 중
+
+게임잼 시작인 7월 12일 전날인 11일부터 서울에서 기차를 타고 창원중앙역으로 내려왔다. 
+
+하루가 지나고, 대회는 오후 4시에 입장이 가능하니 조원끼리는 근처 카페에서 3시까지 집결하기로 했다.
+
+![스크린샷 2024-08-28 오전 5.00.56](/Users/ku/Library/Application Support/typora-user-images/스크린샷 2024-08-28 오전 5.00.56.png)
+
+대회에 입장하니 기념품 키드와 함께 팀명과 이름이 세겨진 목걸이를 받았다
+
+![스크린샷 2024-08-28 오전 5.01.37](/Users/ku/Library/Application Support/typora-user-images/스크린샷 2024-08-28 오전 5.01.37.png)
+
+우리 팀명은 "HICE&D", 줄여서 HICED 였는데, 홍익대 컴퓨터공학과 3명, 시각디자인과 1명을 포함한 팀이기에 **H**ong**I**k **C**omputer **E**ngineering & **C**ommunication **D**esign의 약자를 사용했다.
+
+대회장은 넓고 쾌적했는데, 지어진지 얼마 안된듯한 빌딩 속, 
+
+#### 4. 대회 후
+
+#### 5. 대회 후기 및 느낀점
