@@ -16,7 +16,7 @@ categories: unity
 
 #### 1. 개요
 
-![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdxEMa1S7lQVG38Q6-BBAPqg-QzqVDymR7Fkz05dIgtBtYIppfDFCpZufiTCRb0bLDgi3Phdsfb9igDGxBmMVPUrTfzYG4Xy_2uEQZ_ZhwsF-Lz3eSkegTWzvKVq0EB7zRqYZQTizKBHz88kqB9jgFNcqrd?key=auuBQwKamwgprpUM0X5qvw)
+<img src="{{ site.baseurl }}/assets/m1.png" alt="설명" style="width:50%; height:auto;">
 
 게임잼은 24~72시간 이내에 온전한 게임 한 작품을 완성해야하는 형식의 대회이다.
 
@@ -30,7 +30,7 @@ categories: unity
 
 내 경력과 과거 프로젝트 경험, 게임 엔진에 대한 이해도 등을 적어 제출하며 대회 신청을 마무리했고 몇주 후 약 3대1 경쟁률을 뚫고 경남 마이미 게임잼(이하 게임잼) 참가자에 선정되었다는 메일을 받게되었다.
 
-**![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdpF6xUkvS3Z_-IPQvJoY63-7cLyPfCcagPJMDuAnf5MJQSXl8laGOAp_cMHxgYVVhov-Lz8cSvunjeIoMvGstqbEtMtTo6UvU-n5Diu9lzeyVkGd1MznomslV0cKqOl4FVd6Q9uJ6asnI7j-BMZ3zsJDA?key=auuBQwKamwgprpUM0X5qvw)**
+<img src="{{ site.baseurl }}/assets/m2.png" alt="설명" style="width:50%; height:auto;">
 
 오리엔테이션 내용을 요약하면 다음과 같았다.
 
@@ -39,13 +39,13 @@ categories: unity
 3. 게임 개발은 48시간 동안만 진행
 4. 아트 어셋은 사전에 그려올수 없음
 
-![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXf8Mc8UcN7zGe-h75-xVU-d6fwnZBdXfWQtJ5ySyyEwnUWTUCBPRHdf0q-GqJ976t5ZEfkrU6gg3UkJGcmObF_3BpXaizbM3ijHy0PjHW7TbkDXx3DNDPsUt3QHRehecklxuokuINyM6ZMYFQyggSSLjpRd?key=auuBQwKamwgprpUM0X5qvw) 
+<img src="{{ site.baseurl }}/assets/m3.png" alt="설명" style="width:50%; height:auto;">
 
 심사기준은 다음과 같았다. 나는 보통 게임 개발하면 완성도와 구현정도를 중점적으로 볼 것이라 예상했으나, 기획, 개발, 아트부분 점수가 균일하게 분배되어있는것은 물론, 아이디어 구현, 재미요소등 예상치 못한 부분이 평가대상이였는데, 게임개발이라는 분야 안에는 오직 ‘개발’ 만 있을거라 생각했던 내 자신을 반성했다.
 
 그렇게 시간이 지나고, 대회 일주일 전 드디어 주제가 발표됐다.
 
-![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeSXu8PQeTBFkjSOisQYkG-6Cbk-QqLASxZvvEbeuHeBPfDtslJWC2L1DVUpu_1abamsJR6vm6t9AL32i07e7QUW769tNjn0UlpTqmBv7l4GwB1iJRH4gYHsplGz094HOFhruOwqvMFKt3ONZr7-Bi_Aokf?key=auuBQwKamwgprpUM0X5qvw)
+<img src="{{ site.baseurl }}/assets/m4.png" alt="설명" style="width:50%; height:auto;">
 
 주제는 “MOVE”. 작년 2023 경남 게임잼 주제가 ‘가야 유물’ 이였던것에 비해 주제가 많이 자유로워졌다.
 
@@ -55,11 +55,11 @@ categories: unity
 
 주제가 공개되자마자 우리팀은 모여서 기획회의를 시작했다.
 
-![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXfm7uOieGm7gdSddpaNmbByePLY3o-Q4rIdnbSHY65mlkehGCrMwUD8RpLOkmhOKIIdnGLktv7xjxWgbb5kjfTvQFQFRMIyb3i7Mjl-xMFfxgwRYhWrIZLhujIklcyUf97sEF6e7pYLMXplTxR6LXfo2q4A?key=auuBQwKamwgprpUM0X5qvw)
+<img src="{{ site.baseurl }}/assets/m5.png" alt="설명" style="width:50%; height:auto;">
 
 처음에는 주먹구구식으로 구글 공유문서에 브레인스토밍을 하면서 시작했는데, 게임의 외곽이 잡혀가면 갈수록 신경써야하는 내용이 점점 더 많아졌고, Notion플랫폼을 활용해 필요한 정보를 모으기 시작했다.
 
-![스크린샷 2024-08-28 오전 5.07.02](/Users/ku/Library/Application Support/typora-user-images/스크린샷 2024-08-28 오전 5.07.02.png)
+<img src="{{ site.baseurl }}/assets/m6.png" alt="설명" style="width:50%; height:auto;">
 
 우리팀은 MOVE의 이동 성질 -> 동력 -> 무한동력으로 의미를 확장시켰고, 무한동력 이외에도 MOVE의 사전적 의미인 "이주하다", "감동을 주다"등의 요소를 넣었다.
 
@@ -73,9 +73,9 @@ categories: unity
 >
 > *마지막으로 move는 '감동을 일으키다'라는 뜻도 가지고있는데요, 신물질 GN의 발견과 최종 결말까지의 과정이 일련의 스토리로 구성되어 있어 게임을 통해 감동을 선사하고자 했습니다.*
 
-<실제 대본 내용>
+*실제 대본 내용*
 
-이후로 계속된 비대면 회의를 통해 게임 요소, 캐릭터 설정, 그래픽 컨셉, 게임 특징등을 마저 구상했고, 자세한 내용은
+이후로 계속된 비대면 회의를 통해 게임 요소, 캐릭터 설정, 그래픽 컨셉, 게임 특징등을 마저 구상했고, 자세한 내용은<br>
 
 - [게임 세부 기획](https://docs.google.com/document/d/1eX8npd2ohdhRn7GtCmHqk86F9yTWo55h7Q8OWi-bLLE/edit)
 
@@ -91,11 +91,11 @@ categories: unity
 
 하루가 지나고, 대회는 오후 4시에 입장이 가능하니 조원끼리는 근처 카페에서 3시까지 집결하기로 했다.
 
-![스크린샷 2024-08-28 오전 5.00.56](/Users/ku/Library/Application Support/typora-user-images/스크린샷 2024-08-28 오전 5.00.56.png)
+<img src="{{ site.baseurl }}/assets/m7.png" alt="설명" style="width:50%; height:auto;">
 
 대회에 입장하니 기념품 키드와 함께 팀명과 이름이 세겨진 목걸이를 받았다
 
-![스크린샷 2024-08-28 오전 5.01.37](/Users/ku/Library/Application Support/typora-user-images/스크린샷 2024-08-28 오전 5.01.37.png)
+<img src="{{ site.baseurl }}/assets/m8.png" alt="설명" style="width:50%; height:auto;">
 
 우리 팀명은 "HICE&D", 줄여서 HICED 였는데, 홍익대 컴퓨터공학과 3명, 시각디자인과 1명을 포함한 팀이기에 **H**ong**I**k **C**omputer **E**ngineering & **C**ommunication **D**esign의 약자를 사용했다.
 
